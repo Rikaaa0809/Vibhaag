@@ -16,13 +16,14 @@ function App() {
       <div>
         
         <Routes>
-          <Route path="/" element={<FirstPage />} />
+          
+          <Route path="/Vibhaag/" element={<FirstPage />} />
           <Route path="/FifthPage" element={<FifthPage />} />
           <Route path="/FourthPage" element={<FourthPage />} /> 
           <Route path="/SixthPage" element={<SixthPage />} />
           <Route path="/Projects" element={<Projects />} />
           <Route path="/FirstPage" element={<FirstPage />} />
-          
+        
         </Routes>
         {/* <FourthPage/> */}
 
