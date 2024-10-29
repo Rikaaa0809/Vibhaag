@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import Picture2 from "../public/Picture 2 Aesthetic Shot Thumbnail.png";
-import HomeIcon from "../public/home.png";
+import Picture2 from "./assets/Resources/Picture 2 Aesthetic Shot Thumbnail.png";
+import HomeIcon from "./assets/Resources/home.png"
 import { Link } from "react-router-dom";
 
 const FifthPage = () => {

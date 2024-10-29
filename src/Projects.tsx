@@ -1,13 +1,13 @@
 
-import HomeIcon from "../public/home.png"
+import HomeIcon from "./assets/Resources/home.png"
 import { Link } from "react-router-dom";
-import Rhythm from "../public/Rhythm.png";
-import Alpha from "../public/Alpha.png";
-import Form from "../public/Form studies.png";
-import Netflix from "../public/Netflix.png";
-import Rendering from "../public/Rendering.png";
-import Samosa from "../public/Samosa.png";
-import Video from "../public/Video.png"
+import Rhythm from "./assets/Resources/Rhythm.png";
+import Alpha from "./assets/Resources/Alpha.png";
+import Form from "./assets/Resources/Form studies.png";
+import Netflix from "./assets/Resources/Netflix.png";
+import Rendering from "./assets/Resources/Rendering.png";
+import Samosa from "./assets/Resources/Samosa.png";
+import Video from "./assets/Resources/Video.png"
 
 
 const Projects = () => {

@@ -1,5 +1,5 @@
-import Picture1 from "../public/Picture 1 Corporate Headshot Thumbnail.png";
-import HomeIcon from "../public/home.png";
+import Picture1 from "./assets/Resources/Picture 1 Corporate Headshot Thumbnail.png";
+import HomeIcon from "./assets/Resources/home.png"
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 

@@ -1,12 +1,12 @@
-import Logo from "../public/Logo.png";
-import Wholething from "../public/Wholething.png";
-import GalleryIcon from "../public/GalleryIcon.png";
-import ContactIcon from "../public/ContactIcon.png";
-import ProjectIcon from "../public/ProjectIcon.png";
-import Picture1 from "../public/Picture 1 Corporate Headshot Thumbnail.png";
-import Picture2 from "../public/Picture 2 Aesthetic Shot Thumbnail.png";
-import Picture3 from "../public/Picture 3 Picture which defines me Thumbnail.png";
-import Flower from "../public/flower.png";
+import Logo from "./assets/Resources/Logo.png";
+import Wholething from "./assets/Resources/Wholething.png";
+import GalleryIcon from "./assets/Resources/GalleryIcon.png";
+import ContactIcon from "./assets/Resources/ContactIcon.png";
+import ProjectIcon from "./assets/Resources/ProjectIcon.png";
+import Picture1 from "./assets/Resources/Picture 1 Corporate Headshot Thumbnail.png";
+import Picture2 from "./assets/Resources/Picture 2 Aesthetic Shot Thumbnail.png";
+import Picture3 from "./assets/Resources/Picture 3 Picture which defines me Thumbnail.png";
+import Flower from "./assets/Resources/flower.png";
 
 import { Link } from "react-router-dom";
 
