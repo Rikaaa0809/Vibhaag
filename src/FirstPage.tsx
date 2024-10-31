@@ -8,8 +8,15 @@ import Picture1 from "./assets/Resources/Picture 1 Corporate Headshot Thumbnail.
 import Picture2 from "./assets/Resources/Picture 2 Aesthetic Shot Thumbnail.png";
 import Picture3 from "./assets/Resources/Picture 3 Picture which defines me Thumbnail.png";
 import Flower from "./assets/Resources/flower.png";
+import Flowerwhite from "./assets/Flowerwhite.png";
+import Email from "./assets/Email.png";
+import Behance from "./assets/Behance.png";
+import Linkedin from "./assets/Linkedin.png";
+import Leaf from "./assets/Leaf.png";
 
 import { Link } from "react-router-dom";
+
+// Scroll setting 
 
 const FirstPage = () => {
   const galleryScroll = () => {
@@ -26,9 +33,10 @@ const FirstPage = () => {
     }
   };
 
+// Main code
   return (
     <div className="main-page">
-      {/* Navigation Bar */}
+{/* Navigation Bar */}
       <header>
         <div className="navbar-main-style">
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
@@ -41,10 +49,10 @@ const FirstPage = () => {
         </div>
       </header>
 
-      {/* First Page */}
+{/* First Page */}
       <div style={{ display: "flex" }}>
         <div>
-          {/* Left Side - Image */}
+{/* Left Side - Main Image */}
           <div style={{ display: "flex", width: "70%" }}>
             <img
               src={Wholething}
@@ -52,8 +60,8 @@ const FirstPage = () => {
               className="whole-thing-div"
             />
           </div>
-
-          {/* Icons Navigation menu */}
+{/* Icons Navigation menu */}
+    {/* Projects */}
           <div style={{ display: "flex" }}>
             <div style={{ position: "absolute", right: "22%", top: "43%" }}>
               <div style={{ display: "flex", alignItems: "center" }}>
@@ -66,6 +74,8 @@ const FirstPage = () => {
                   <button className="content-paragraph" style={{cursor: 'pointer', backgroundColor: '#F6F5F2', borderRadius: '20px', outline: 'none', border: 'none', padding: '5px', width: '200px'}} onClick={() => contactScroll()} >Projects</button>
                 </Link>
               </div>
+
+      {/* Gallery */}
               <div style={{ display: "flex", alignItems: "center" }}>
                 <img
                   src={GalleryIcon}
@@ -86,6 +96,8 @@ const FirstPage = () => {
                   style={{ width: "55px", height: "55px", marginLeft: "15px" }}
                 />
               </div>
+
+      {/* Contacts */}
               <div style={{ display: "flex", alignItems: "center" }}>
                 <img
                   src={ContactIcon}
@@ -96,7 +108,7 @@ const FirstPage = () => {
               </div>
             </div>
 
-            {/* Introduction brief */}
+{/* Introduction brief */}
 
             <div
               className="line"
@@ -104,19 +116,21 @@ const FirstPage = () => {
             ></div>
 
             <div>
+              <div>
               <span
                 className="niharika"
                 style={{ position: "absolute", top: "65%", left: "84%" }}
               >
                 niharika
               </span>
-
               <span
                 className="hey-im"
                 style={{ position: "absolute", top: "66%", left: "73.5%" }}
               >
                 Hey!! I am
               </span>
+              </div>
+
               <span
                 className="a-shy-optimistic"
                 style={{ position: "absolute", top: "74%", left: "68%" }}
@@ -127,15 +141,20 @@ const FirstPage = () => {
                 on users' faces when they like the <br />
                 design gives me joy.
               </span>
+
             </div>
+
+            <img src={Leaf} alt="" style={{position: "absolute", top:'93%', right:'4%', width: '340px', height: 'auto', opacity:'30%'}} />
           </div>
         </div>
       </div>
 
-      {/* Second Page Scroll Education and Experience */}
+{/* Second Page Scroll Education and Experience */}
 
       <div style={{ height: "20%", display: "flex" }}>
+  {/* Education section */}
         <span className="education">education</span>
+
         <div className="heading-bold">
           <span style={{ position: "absolute", left: "38%", top: "105%" }}>
             Master's in Interaction and
@@ -145,17 +164,23 @@ const FirstPage = () => {
             Bachelor's in Design (Product <br /> Design)
           </span>
         </div>
+
         <div className="content-paragraph">
           <span style={{ position: "absolute", left: "38%", top: "114%" }}>
             University of Limerick, Ireland
           </span>
           <span style={{ position: "absolute", left: "68%", top: "114%" }}>
             Symbiosis School of Planning, <br /> Architecture and Design
-          </span>
+          </span>         
         </div>
+
       </div>
+
+  {/* Experience Section  */}
       <div style={{ display: "flex", width: "33%" }}>
+
         <span className="experience">experience</span>
+
         <div className="heading-bold">
           <span style={{ position: "absolute", left: "38%", top: "125%" }}>
             Product Design Intern
@@ -164,6 +189,7 @@ const FirstPage = () => {
             Product Design Intern
           </span>
         </div>
+
         <div className="content-paragraph">
           <span style={{ position: "absolute", left: "38%", top: "130%" }}>
             Meir Living, India
@@ -176,7 +202,10 @@ const FirstPage = () => {
             Jun 2024- Aug 2024
           </span>
         </div>
+
       </div>
+
+ {/* Numbering of skills      */}
       <div style={{ display: "flex" }}>
         <div style={{ width: "60%" }}>
           <div className="numbering">
@@ -192,6 +221,8 @@ const FirstPage = () => {
             <span style={{ position: "absolute", left: "43%", top: "168%" }}>
               4
             </span>
+
+    {/* Skills */}
           </div>
           <div className="content-paragraph">
             <span
@@ -206,6 +237,7 @@ const FirstPage = () => {
               Rhinoceros 3D <br />
               Keyshot
             </span>
+
             <span
               style={{
                 position: "absolute",
@@ -218,6 +250,7 @@ const FirstPage = () => {
               Conducting Interview <br />
               Creating Inforgraphics
             </span>
+
             <span
               style={{
                 position: "absolute",
@@ -230,6 +263,7 @@ const FirstPage = () => {
               Apt Design Elements <br />
               Following Brand Guidelines
             </span>
+
             <span
               style={{
                 position: "absolute",
@@ -242,11 +276,13 @@ const FirstPage = () => {
               Typescript <br />
               React
             </span>
+
           </div>
         </div>
+
         <div className="main-heading">
-          <span style={{ position: "absolute", right: "12%", top: "160%" }}>
-            tops skills
+          <span style={{ position: "absolute", right: "14%", top: "160%" }}>
+            top skills
           </span>
         </div>
       </div>
@@ -254,19 +290,22 @@ const FirstPage = () => {
       {/* Third Page Gallery */}
 
       
-
       <div className="main-heading">
         <span style={{ position: "absolute", left: "44%", top: "210%" }}  id="gallery-section">
           gallery
         </span>
       </div>
-      <div style={{height: '550px', width: '380px', background: 'white', position: 'absolute', top: '226%', left: '7.5%', borderRadius: '30px'}}></div>
-      <div style={{height: '550px', width: '380px', background: 'white', position: 'absolute', top: '226%', left: '38%', borderRadius: '30px'}}></div>
-      <div style={{height: '550px', width: '380px', background: 'white', position: 'absolute', top: '226%', right: '7.5%', borderRadius: '30px'}}></div>
-      <div style={{ display: "flex" }}>
-        {/* Picture 1 - navigate to fourth page */}
 
-          
+{/* Polaroid background */}
+      <div>
+        <div style={{height: '550px', width: '380px', background: 'white', position: 'absolute', top: '226%', left: '7.5%', borderRadius: '30px'}}></div>
+        <div style={{height: '550px', width: '380px', background: 'white', position: 'absolute', top: '226%', left: '37.5%', borderRadius: '30px'}}></div>
+        <div style={{height: '550px', width: '380px', background: 'white', position: 'absolute', top: '226%', right: '7.5%', borderRadius: '30px'}}></div>
+      </div>
+      
+ {/* Pictures Gallery      */}
+      <div style={{ display: "flex" }}>
+
           <Link to="/FourthPage">
             <img
               src={Picture1}
@@ -277,7 +316,6 @@ const FirstPage = () => {
                 top: "223%",
                 width: "20%",
                 height: "auto",
-                
                 
               }}
             />
@@ -291,7 +329,7 @@ const FirstPage = () => {
               alt="Picture2"
               style={{
                 position: "absolute",
-                left: "40.5%",
+                left: "40%",
                 top: "223%",
                 width: "20%",
                 height: "auto",
@@ -316,6 +354,8 @@ const FirstPage = () => {
           </Link>
         
       </div>
+
+ {/* Picture HEadings      */}
       <div
         style={{
           display: "flex",
@@ -325,15 +365,17 @@ const FirstPage = () => {
           color: "#314e52",
         }}
       >
-        <span style={{ position: "absolute", top: "293%", left: "13%" }}>
+        <span style={{ position: "absolute", top: "292%", left: "13%" }}>
           Corporate Headshot
         </span>
-        <span style={{ position: "absolute", top: "293%", left: "45%" }}>
+        <span style={{ position: "absolute", top: "292%", left: "44.5%" }}>
           Aesthetic Picture
         </span>
-        <span style={{ position: "absolute", top: "293%", right: "12%" }}>
+        <span style={{ position: "absolute", top: "292%", right: "12%" }}>
           Picture which Defines Me
         </span>
+
+ {/* Flower decoration        */}
         <img
           src={Flower}
           alt="Flower"
@@ -351,7 +393,7 @@ const FirstPage = () => {
           alt="Flower"
           style={{
             position: "absolute",
-            left: "36%",
+            left: "35.5%",
             top: "270%",
             width: "60px",
             height: "auto",
@@ -371,71 +413,102 @@ const FirstPage = () => {
           }}
         />
       </div>
-      {/* Contacts */}
-      <div>
+
+{/* Contacts */}
+
+      <div style={{width: '1920px', height: '400px', backgroundColor: '#314e52', position: "absolute", top: '315%'}}></div>
+
+  {/* Flower motif */}
+      <div style={{display: "flex", margin:'3px'}}>
         <img
-          src={Flower}
+          src={Flowerwhite}
           alt="Flower"
           style={{
             position: "absolute",
-            left: "48%",
-            top: "330%",
-            width: "90px",
+            left: "48.35%",
+            top: "322%",
+            width: "50px",
+            height: "auto", 
+          }}
+        />
+
+        <img
+          src={Flowerwhite}
+          alt="Flower"
+          style={{
+            position: "absolute",
+            left: "44%",
+            top: "322%",
+            width: "50px",
             height: "auto",
-            opacity: "20%",
+          }}
+        />
+
+        <img
+          src={Flowerwhite}
+          alt="Flower"
+          style={{
+            position: "absolute",
+            right: "44%",
+            top: "322%",
+            width: "50px",
+            height: "auto",
           }}
         />
       </div>
-      <div
-        className="line"
-        style={{
-          position: "absolute",
-          left: "30%",
-          top: "348%",
-          opacity: "40%",
-        }}
-      ></div>
+
+   {/* Heading Contacts */}
       <span
-        className="main-heading"
-        style={{ position: "absolute", left: "44%", top: "348%" }}
+        style={{ position: "absolute", left: "43.5%", top: "330%", fontFamily: 'bestigia', fontSize: '70px', color: '#F7F6E7' }}
         id="contact-section"
-      >
-        contact
+      >contact
       </span>
-      <div className="content-paragraph">
-        <span
+
+{/* Phone Number, i don't think needed */}
+      <div className="content-paragraph-reverse">
+        {/* <span
           style={{
             position: "absolute",
-            top: "366%",
+            top: "354%",
             left: "45%",
             textAlign: "center",
           }}
         >
           +353 (0) 894722369
-        </span>
-        <span style={{ position: "absolute", top: "372%", left: "45%" }}>
-          <a href="mailto:niharikasharma332244@gmail.com">
-            Get in Touch via Email
+        </span> */}
+
+{/* Email Address */}
+        <span style={{ position: "absolute", top: "350%", left: '48.5%' }}>
+          <a className="content-paragraph-reverse"
+          href="mailto:niharikasharma332244@gmail.com">
+            <img src={Email} alt="" style={{ width: '60px', height: 'auto'}} />
           </a>
         </span>
-        <span style={{ position: "absolute", top: "378%", left: "49%" }}>
-          <a
+        <span className="content-paragraph-reverse" style={{ position: "absolute", top: "358%", left: '47%', textAlign: 'center' }}>Get in Touch <br />Collaborate?</span>
+
+{/* LinkedIn  */}
+        <span style={{ position: "absolute", top: "350%", left: "20%" }}>
+          <a className="content-paragraph-reverse"
             href="https://www.linkedin.com/in/niharika-sharma09/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn
+            <img src={Linkedin} alt="" style={{ width: '50px', height: 'auto'}} />
           </a>
         </span>
-        <span style={{ position: "absolute", top: "384%", left: "49%" }}>
-          <a
+        <span className="content-paragraph-reverse" style={{ position: "absolute", top: "358%", left: '18%', textAlign: 'center' }}>Follow me on <br />LinkedIn</span>
+
+{/* Behance         */}
+        <span style={{ position: "absolute", top: "350%", right: "20%" }}>
+          <a className="content-paragraph-reverse"
             href="https://www.behance.net/niharikasharma17"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Behance
+            <img src={Behance} alt="" style={{ width: '50px', height: 'auto'}} />
           </a>
         </span>
+        <span className="content-paragraph-reverse" style={{ position: "absolute", top: "358%", right: '16%', textAlign: 'center' }}>Check Out my Work on<br />Behance</span>
       </div>
     </div>
   );

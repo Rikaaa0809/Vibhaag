@@ -1,5 +1,5 @@
 .main-page {
-  height: 400vh;
+  height: 365vh;
   background: #e7e6e1;
 }
 
@@ -101,6 +101,14 @@
 
 }
 
+.content-paragraph-reverse {
+ 
+  font-size: 16px;
+  font-family: Poppins;
+  color: #F7F6E7;
+
+}
+
 .numbering {
   font-size: 96px;
   font-weight: 1000;
@@ -181,6 +189,15 @@
   src: url("./assets/Resources/INTER-VARIABLEFONT_SLNT\,WGHT.TTF") format("truetype");
 }
 
+@font-face {
+  font-family: "Ballet";
+  src: url("./assets/Resources/BALLET-REGULAR-VARIABLEFONT_OPSZ.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "Fleurdeleah";
+  src: url("./assets/Resources/FLEURDELEAH-REGULAR.TTF") format("truetype");
+}
 
 
 
