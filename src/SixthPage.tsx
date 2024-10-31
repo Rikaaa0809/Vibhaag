@@ -45,9 +45,21 @@ const SixthPage = () => {
              But despite all these achievements, I still struggle. I still find it difficult to talk to new people at times. However, these little victories over the years have built a strong foundation of self-confidence. It’s that self-confidence that keeps me going, despite the hesitation I sometimes feel.
              This picture, with me lying on the ground in my UL Global Student Ambassador t-shirt, is a representation of all that I’ve overcome. The autumn leaves around me symbolize the changes I’ve embraced, the growth I’ve nurtured. Though I still have a shy, introverted side, this image shows the confidence I’ve built, the courage I’ve found, and the path I’ve carved out for myself through all the little achievements that define who I am today.
             </span>
-            <li><Link to="/FirstPage"><div>
-              <img src={HomeIcon} alt="" style={{position: "absolute", top: '4%', left: "2%", width: '30px', height: 'auto', opacity: '40%'}} />
-            </div></Link></li>
+          <Link to="/FirstPage">
+            <div style={{width: '60px', height: '100px', borderBottomRightRadius: '30px',borderBottomLeftRadius: '30px', position: "absolute", left:'4%', backgroundColor: '#F6F5F2'}}></div>
+            <img
+            src={HomeIcon}
+            alt=""
+            style={{
+              position: "absolute",
+              top: "7%",
+              left: "5%",
+              width: "30px",
+              height: "auto",
+              opacity: "40%",
+            }}
+            />
+          </Link>
         </div>
         
 

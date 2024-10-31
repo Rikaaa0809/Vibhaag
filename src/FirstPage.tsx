@@ -1,4 +1,5 @@
 import Logo from "./assets/Resources/Logo.png";
+import Card from 'react-bootstrap/Card';
 import Wholething from "./assets/Resources/Wholething.png";
 import GalleryIcon from "./assets/Resources/GalleryIcon.png";
 import ContactIcon from "./assets/Resources/ContactIcon.png";
@@ -15,6 +16,13 @@ const FirstPage = () => {
     const galleryDiv = document.getElementById("gallery-section");
     if (galleryDiv) {
       galleryDiv.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const contactScroll = () => {
+    const contactDiv = document.getElementById("contact-section");
+    if (contactDiv) {
+      contactDiv.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -47,15 +55,15 @@ const FirstPage = () => {
 
           {/* Icons Navigation menu */}
           <div style={{ display: "flex" }}>
-            <div style={{ position: "absolute", right: "26%", top: "43%" }}>
+            <div style={{ position: "absolute", right: "22%", top: "43%" }}>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <img
                   src={ProjectIcon}
                   alt=""
-                  style={{ width: "55px", height: "55px" }}
+                  style={{ width: "55px", height: "55px", marginRight: '5px' }}
                 />
                 <Link to="/Projects" style={{ textDecoration: "none" }}>
-                  <span className="content-paragraph">Projects</span>
+                  <button className="content-paragraph" style={{cursor: 'pointer', backgroundColor: '#F6F5F2', borderRadius: '20px', outline: 'none', border: 'none', padding: '5px', width: '200px'}} onClick={() => contactScroll()} >Projects</button>
                 </Link>
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
@@ -65,25 +73,26 @@ const FirstPage = () => {
                   style={{ width: "55px", height: "55px", opacity: "0%" }}
                 />
 
-                <span
-                  className="content-paragraph"
+                <button
+                  className="content-paragraph" style={{cursor: 'pointer', backgroundColor: '#F6F5F2', borderRadius: '20px', outline: 'none', border: 'none', padding: '5px', width: '200px'}} 
                   onClick={() => galleryScroll()}
+                
                 >
                   Gallery
-                </span>
+                </button>
                 <img
                   src={GalleryIcon}
                   alt=""
-                  style={{ width: "55px", height: "55px", marginLeft: "10px" }}
+                  style={{ width: "55px", height: "55px", marginLeft: "15px" }}
                 />
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <img
                   src={ContactIcon}
                   alt=""
-                  style={{ width: "55px", height: "55px" }}
+                  style={{ width: "55px", height: "55px", marginRight: '5px'  }}
                 />
-                <span className="content-paragraph">Contact</span>
+                <button className="content-paragraph" style={{cursor: 'pointer', backgroundColor: '#F6F5F2', borderRadius: '20px', outline: 'none', border: 'none', padding: '5px', width: '200px'}} onClick={() => contactScroll()}>Contact</button>
               </div>
             </div>
 
@@ -244,16 +253,20 @@ const FirstPage = () => {
 
       {/* Third Page Gallery */}
 
+      
+
       <div className="main-heading">
-        <span style={{ position: "absolute", left: "43%", top: "210%" }}>
+        <span style={{ position: "absolute", left: "44%", top: "210%" }}  id="gallery-section">
           gallery
         </span>
       </div>
-      <div className="rectangle"></div>
+      <div style={{height: '550px', width: '380px', background: 'white', position: 'absolute', top: '226%', left: '7.5%', borderRadius: '30px'}}></div>
+      <div style={{height: '550px', width: '380px', background: 'white', position: 'absolute', top: '226%', left: '38%', borderRadius: '30px'}}></div>
+      <div style={{height: '550px', width: '380px', background: 'white', position: 'absolute', top: '226%', right: '7.5%', borderRadius: '30px'}}></div>
       <div style={{ display: "flex" }}>
         {/* Picture 1 - navigate to fourth page */}
 
-        <li>
+          
           <Link to="/FourthPage">
             <img
               src={Picture1}
@@ -264,12 +277,14 @@ const FirstPage = () => {
                 top: "223%",
                 width: "20%",
                 height: "auto",
+                
+                
               }}
             />
           </Link>
-        </li>
+        
 
-        <li>
+        
           <Link to="/FifthPage">
             <img
               src={Picture2}
@@ -283,9 +298,9 @@ const FirstPage = () => {
               }}
             />
           </Link>
-        </li>
+        
 
-        <li>
+        
           <Link to="/SixthPage">
             <img
               src={Picture3}
@@ -299,7 +314,7 @@ const FirstPage = () => {
               }}
             />
           </Link>
-        </li>
+        
       </div>
       <div
         style={{
@@ -319,9 +334,45 @@ const FirstPage = () => {
         <span style={{ position: "absolute", top: "293%", right: "12%" }}>
           Picture which Defines Me
         </span>
+        <img
+          src={Flower}
+          alt="Flower"
+          style={{
+            position: "absolute",
+            left: "6%",
+            top: "222%",
+            width: "60px",
+            height: "auto",
+            opacity: "20%",
+          }}
+        />
+        <img
+          src={Flower}
+          alt="Flower"
+          style={{
+            position: "absolute",
+            left: "36%",
+            top: "270%",
+            width: "60px",
+            height: "auto",
+            opacity: "20%",
+          }}
+        />
+        <img
+          src={Flower}
+          alt="Flower"
+          style={{
+            position: "absolute",
+            right: "6%",
+            top: "222%",
+            width: "60px",
+            height: "auto",
+            opacity: "20%",
+          }}
+        />
       </div>
       {/* Contacts */}
-      <div id="gallery-section">
+      <div>
         <img
           src={Flower}
           alt="Flower"
@@ -347,6 +398,7 @@ const FirstPage = () => {
       <span
         className="main-heading"
         style={{ position: "absolute", left: "44%", top: "348%" }}
+        id="contact-section"
       >
         contact
       </span>

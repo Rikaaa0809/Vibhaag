@@ -106,18 +106,21 @@ const FourthPage = () => {
           keeping the attention entirely on me.
         </span>
         <div>
-          <li><Link to="/FirstPage"><img
+          <Link to="/FirstPage">
+            <div style={{width: '60px', height: '100px', borderBottomRightRadius: '30px',borderBottomLeftRadius: '30px', position: "absolute", left:'4%', backgroundColor: '#F6F5F2'}}></div>
+            <img
             src={HomeIcon}
             alt=""
             style={{
               position: "absolute",
-              top: "4%",
-              left: "2%",
+              top: "7%",
+              left: "5%",
               width: "30px",
               height: "auto",
               opacity: "40%",
             }}
-          /></Link></li>
+            />
+          </Link>
         </div>
       </div>
     </div>
