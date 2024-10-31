@@ -1,5 +1,5 @@
 import Logo from "./assets/Resources/Logo.png";
-import Card from 'react-bootstrap/Card';
+
 import Wholething from "./assets/Resources/Wholething.png";
 import GalleryIcon from "./assets/Resources/GalleryIcon.png";
 import ContactIcon from "./assets/Resources/ContactIcon.png";
