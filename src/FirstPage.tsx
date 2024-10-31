@@ -355,7 +355,7 @@ const FirstPage = () => {
         
       </div>
 
- {/* Picture HEadings      */}
+ {/* Picture Headings      */}
       <div
         style={{
           display: "flex",
@@ -416,7 +416,7 @@ const FirstPage = () => {
 
 {/* Contacts */}
 
-      <div style={{width: '1920px', height: '400px', backgroundColor: '#314e52', position: "absolute", top: '315%'}}></div>
+      <div style={{width: '100%', height: '400px', backgroundColor: '#314e52', position: "absolute", top: '315%'}}></div>
 
   {/* Flower motif */}
       <div style={{display: "flex", margin:'3px'}}>
