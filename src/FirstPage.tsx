@@ -4,6 +4,7 @@ import Wholething from "./assets/Resources/Wholething.png";
 import GalleryIcon from "./assets/Resources/GalleryIcon.png";
 import ContactIcon from "./assets/Resources/ContactIcon.png";
 import ProjectIcon from "./assets/Resources/ProjectIcon.png";
+import VideoIcon from "./assets/Resources/Asset 8xxxhdpi.png";
 import Picture1 from "./assets/Resources/Picture 1 Corporate Headshot Thumbnail.png";
 import Picture2 from "./assets/Resources/Picture 2 Aesthetic Shot Thumbnail.png";
 import Picture3 from "./assets/Resources/Picture 3 Picture which defines me Thumbnail.png";
@@ -13,6 +14,7 @@ import Email from "./assets/Email.png";
 import Behance from "./assets/Behance.png";
 import Linkedin from "./assets/Linkedin.png";
 import Leaf from "./assets/Leaf.png";
+
 
 import { Link } from "react-router-dom";
 
@@ -63,7 +65,7 @@ const FirstPage = () => {
 {/* Icons Navigation menu */}
     {/* Projects */}
           <div style={{ display: "flex" }}>
-            <div style={{ position: "absolute", right: "22%", top: "43%" }}>
+            <div style={{ position: "absolute", right: "8%", top: "25%" }}>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <img
                   src={ProjectIcon}
@@ -71,7 +73,7 @@ const FirstPage = () => {
                   style={{ width: "55px", height: "55px", marginRight: '5px' }}
                 />
                 <Link to="/Projects" style={{ textDecoration: "none" }}>
-                  <button className="content-paragraph" style={{cursor: 'pointer', backgroundColor: '#F6F5F2', borderRadius: '20px', outline: 'none', border: 'none', padding: '5px', width: '200px'}} onClick={() => contactScroll()} >Projects</button>
+                  <button className="content-paragraph" style={{cursor: 'pointer', backgroundColor: '#F6F5F2', borderRadius: '20px', outline: 'none', border: 'none', padding: '5px', width: '200px'}}>Projects</button>
                 </Link>
               </div>
 
@@ -93,20 +95,47 @@ const FirstPage = () => {
                 <img
                   src={GalleryIcon}
                   alt=""
-                  style={{ width: "55px", height: "55px", marginLeft: "15px" }}
+                  style={{ width: "55px", height: "50px", marginLeft: "15px" }}
                 />
               </div>
 
-      {/* Contacts */}
+      
+
+      {/* Video */}
               <div style={{ display: "flex", alignItems: "center" }}>
+
+                <img
+                  src={VideoIcon}
+                  alt=""
+                  style={{ width: "50px", height: "50px", marginRight: '5px' }}
+                />
+                <Link to="/Video" style={{ textDecoration: "none" }}>
+                  <button className="content-paragraph" style={{cursor: 'pointer', backgroundColor: '#F6F5F2', borderRadius: '20px', outline: 'none', border: 'none', padding: '5px', width: '200px'}} >Video</button>
+                </Link>
+
+              </div>
+
+
+        {/* Contacts */}
+              <div style={{ display: "flex", alignItems: "center" }}>
+                
                 <img
                   src={ContactIcon}
                   alt=""
-                  style={{ width: "55px", height: "55px", marginRight: '5px'  }}
+                  style={{ width: "55px", height: "55px", opacity: "0%" }}
                 />
+                
                 <button className="content-paragraph" style={{cursor: 'pointer', backgroundColor: '#F6F5F2', borderRadius: '20px', outline: 'none', border: 'none', padding: '5px', width: '200px'}} onClick={() => contactScroll()}>Contact</button>
+              
+                <img
+                  src={ContactIcon}
+                  alt=""
+                  style={{ width: "55px", height: "55px", marginLeft: "15px" }}
+                />
               </div>
             </div>
+
+      
 
 {/* Introduction brief */}
 

@@ -125,10 +125,10 @@ const FourthPage = () => {
           I opted for a slightly tilted posture with a wide smile to convey
           confidence and flexibility—important
           traits in a corporate setting. <br /> Wearing formal attire, specifically a
-          black blazer, ensured that even though <br /> I posed in a fun,
-          approachable manner, the overall look remains formal and professional.
-          The white background provided a clean contrast, <br /> emphasizing the black
-          blazer and my facial expression,
+          black blazer, ensured that even though I posed in a fun,
+          approachable manner, the overall look remains <br />formal and professional.
+          The white background provided a clean contrast, emphasizing the black
+          blazer and my facial expression,<br />
           keeping the attention entirely on me.
         </span>
 

@@ -9,6 +9,7 @@ import FourthPage from "../src/FourthPage";
 import FifthPage from "../src/FifthPage";
 import SixthPage from "../src/SixthPage";
 import Projects from "../src/Projects";
+import Video from "../src/Video"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/SixthPage" element={<SixthPage />} />
           <Route path="/Projects" element={<Projects />} />
           <Route path="/FirstPage" element={<FirstPage />} />
+          <Route path="/Video" element={<Video />} />
         
         </Routes>
         {/* <FourthPage/> */}

@@ -85,7 +85,7 @@ const FifthPage = () => {
           <br />
           <span style={{ fontWeight: "600" }}>
             No white balance adjustment:
-          </span>Natural light was consistent, with the sun parallel to the face, <br />
+          </span> Natural light was consistent, with the sun parallel to the face, <br />
           minimizing shadows and maintaining a balanced, warm tone. <br />
           <br />
           <span style={{ fontWeight: "600" }}>Bright red top:</span> Chosen for
