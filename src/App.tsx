@@ -9,12 +9,16 @@ import FourthPage from "../src/FourthPage";
 import FifthPage from "../src/FifthPage";
 import SixthPage from "../src/SixthPage";
 import Projects from "../src/Projects";
-import Video from "../src/Video"
+import Video from "../src/Video";
+import Posts from "../src/Posts";
+// import ShowPosts from "../src/ShowPosts"
+// import Chat from "../src/Chat"
 
 function App() {
   return (
     
       <div>
+        {/* <Chat /> */}
         
         <Routes>
           
@@ -25,9 +29,12 @@ function App() {
           <Route path="/Projects" element={<Projects />} />
           <Route path="/FirstPage" element={<FirstPage />} />
           <Route path="/Video" element={<Video />} />
+          <Route path="/Posts" element={<Posts />} />
+          
         
         </Routes>
         {/* <FourthPage/> */}
+       {/* <PostApp />  */}
 
         <footer className="footer" style={{ background: '#e7e6e1', padding: '3px', justifyItems: 'center', alignItems: 'center' }}> {/* Footer section */}
           <p>&copy; {new Date().getFullYear()} Niharika Sharma. All Rights Reserved.</p> {/* Dynamic copyright year */}
