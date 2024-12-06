@@ -15,8 +15,7 @@ import Email from "./assets/Email.png";
 import Behance from "./assets/Behance.png";
 import Linkedin from "./assets/Linkedin.png";
 import Leaf from "./assets/Leaf.png";
-import PostsIcon from "./assets/Resources/PostsIcon.png"
-
+import PostsIcon from "./assets/Resources/PostsIcon.png";
 
 import { Link } from "react-router-dom";
 
@@ -44,740 +43,660 @@ const FirstPage = () => {
     }
   };
 
-  
-
   // Main code
   return (
-    <div className="main-page">
+    <div style={{ background: "#e7e6e1", minHeight: "100vh" }}>
       {/* Navigation Bar */}
       <header>
         <div className="navbar-main-style">
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <img
-              src={Logo}
-              alt="Logo"
-              style={{ width: "30px", height: "auto" }}
-            />
+            <img src={Logo} alt="Logo" className="logo-style" />
           </div>
         </div>
       </header>
 
       {/* First Page */}
-      <div style={{ display: "flex" }}>
-        <div>
-          {/* Left Side - Main Image */}
-          <div style={{ display: "flex", width: "70%" }}>
-            <img
-              src={Wholething}
-              alt="Whole Thing"
-              className="whole-thing-div"
-            />
-          </div>
-          {/* Icons Navigation menu */}
+      <div style={{ paddingRight: "3vw", paddingLeft: "3vw" }}>
+        <div style={{ padding: "40px 80px" }}>
+          <div className="first-division">
+            <div>
+              <img src={Wholething} alt="" className="whole-thing-div" />
+            </div>
+            <div className="line"></div>
+            <div>
+              <div
+                style={{
+                  marginTop: "13%",
+                  justifyItems: "center",
+                  paddingLeft: "80px",
+                }}
+              >
+                <style>
+                  {`
+                    /* Add hover effect to buttons */
+                    button.button-icon:hover {
+                      transform: scale(1.05); /* Slightly enlarge the button */
+                      transition: all 0.1s ease-in-out; /* Smooth transition */
+                      color: #314e52; /* Change text color to match theme */
+                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+                    }
 
-          <div style={{ display: "flex" }}>
-            <div style={{ position: "absolute", right: "8%", top: "16%" }}>
-              <style>
-                {`
-                  /* Add hover effect to buttons */
-                  button.content-paragraph:hover {
-                    background-color: #dcdcdc; /* Light gray background on hover */
-                    transform: scale(1.05); /* Slightly enlarge the button */
-                    transition: all 0.1s ease-in-out; /* Smooth transition */
-                    color: #314e52; /* Change text color to match theme */
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-                  }
-
-                  
-                  }
-                `}
-              </style>
-
-              {/* About */}
-              <div style={{ display: "flex", alignItems: "center", marginBottom: '8px' }}>
-                
-
-                <button
-                  className="content-paragraph"
-                  style={{
-                    cursor: "pointer",
-                    backgroundColor: "#F6F5F2",
-                    borderRadius: "20px",
-                    outline: "none",
-                    border: "none",
-                    padding: "5px",
-                    width: "200px",
                     
-                  }}
-                  onClick={() => aboutScroll()}
-                >
-                  About
-                </button>
-                <img
-                  src={AboutIcon}
-                  alt=""
-                  style={{ width: "45px", height: "45px", marginLeft: "8px" }}
-                />
-              </div>
+                    }
+                  `}
+                </style>
 
-              
-
-              {/* PhotoBlog */}
-              <div style={{ display: "flex", alignItems: "center", marginBottom: '8px' }}>
-                
-
-                <button
-                  className="content-paragraph"
+                {/* About */}
+                <div
                   style={{
-                    cursor: "pointer",
-                    backgroundColor: "#F6F5F2",
-                    borderRadius: "20px",
-                    outline: "none",
-                    border: "none",
-                    padding: "5px",
-                    width: "200px",
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "8px",
                   }}
-                  onClick={() => galleryScroll()}
                 >
-                  Photo Blog
-                </button>
-                <img
-                  src={GalleryIcon}
-                  alt=""
-                  style={{ width: "45px", height: "40px", marginLeft: "8px" }}
-                />
-              </div>
-
-              {/* Video Blog */}
-              <div style={{ display: "flex", alignItems: "center", marginBottom: '5px' }}>
-                
-
-                <Link to="/Video" style={{ textDecoration: "none" }}>
-                  <button
-                    className="content-paragraph"
-                    style={{
-                      cursor: "pointer",
-                      backgroundColor: "#F6F5F2",
-                      borderRadius: "20px",
-                      outline: "none",
-                      border: "none",
-                      padding: "5px",
-                      width: "200px",
-                    }}
-                  >
-                    Video Blog
+                  <button className="button-icon" onClick={() => aboutScroll()}>
+                    About
                   </button>
-                </Link>
+                  <img
+                    src={AboutIcon}
+                    alt=""
+                    className="icon-size"
+                    style={{ width: "45px", height: "45px", marginLeft: "8px" }}
+                  />
+                </div>
 
-                <img
-                  src={VideoIcon}
-                  alt=""
-                  style={{ width: "45px", height: "40px", marginLeft: "8px", marginBottom: '5px' }}
-                />
-
-              </div>
-
-              
-{/* GalleryButton */}
-
-              <div style={{ display: "flex", alignItems: "center", marginBottom: '8px' }}>
-                
-                <Link to="/Posts" style={{ textDecoration: "none" }}>
-                  <button
-                    className="content-paragraph"
-                    style={{
-                      cursor: "pointer",
-                      backgroundColor: "#F6F5F2",
-                      borderRadius: "20px",
-                      outline: "none",
-                      border: "none",
-                      padding: "5px",
-                      width: "200px",
-                    }}
-                  >
-                    Gallery
-                  </button>
-                </Link>
-
-                <img
-                  src={PostsIcon}
-                  alt=""
-                  style={{ width: "50px", height: "45px", marginLeft: "8px" }}
-                />
-
-              </div>
-
-              {/* Projects */}
-
-              <div style={{ display: "flex", alignItems: "center", marginBottom: '10px' }}>
-                
-
-                <Link to="/Projects" style={{ textDecoration: "none" }}>
-                  <button
-                    className="content-paragraph"
-                    style={{
-                      cursor: "pointer",
-                      backgroundColor: "#F6F5F2",
-                      borderRadius: "20px",
-                      outline: "none",
-                      border: "none",
-                      padding: "5px",
-                      width: "200px",
-                    }}
-                  >
-                    Projects
-                  </button>
-                </Link>
-
-                <img
-                  src={ProjectIcon}
-                  alt=""
-                  style={{ width: "45px", height: "40px", marginLeft: "8px" }}
-                />
-              </div>
-
-              {/* Contacts */}
-              <div style={{ display: "flex", alignItems: "center", marginBottom: '5px' }}>
-                
-
-                <button
-                  className="content-paragraph"
+                {/* PhotoBlog */}
+                <div
                   style={{
-                    cursor: "pointer",
-                    backgroundColor: "#F6F5F2",
-                    borderRadius: "20px",
-                    outline: "none",
-                    border: "none",
-                    padding: "5px",
-                    width: "200px",
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "8px",
                   }}
-                  onClick={() => contactScroll()}
                 >
-                  Contact
-                </button>
+                  <button
+                    className="button-icon"
+                    onClick={() => galleryScroll()}
+                  >
+                    Photo Blog
+                  </button>
+                  <img
+                    src={GalleryIcon}
+                    alt=""
+                    style={{ width: "45px", height: "40px", marginLeft: "8px" }}
+                  />
+                </div>
 
+                {/* Video Blog */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "5px",
+                  }}
+                >
+                  <Link to="/Video" style={{ textDecoration: "none" }}>
+                    <button className="button-icon">Video Blog</button>
+                  </Link>
+
+                  <img
+                    src={VideoIcon}
+                    alt=""
+                    style={{
+                      width: "45px",
+                      height: "40px",
+                      marginLeft: "8px",
+                      marginBottom: "5px",
+                    }}
+                  />
+                </div>
+
+                {/* GalleryButton */}
+
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "8px",
+                  }}
+                >
+                  <Link to="/Posts" style={{ textDecoration: "none" }}>
+                    <button className="button-icon">Gallery</button>
+                  </Link>
+
+                  <img
+                    src={PostsIcon}
+                    alt=""
+                    style={{ width: "50px", height: "45px", marginLeft: "8px" }}
+                  />
+                </div>
+
+                {/* Projects */}
+
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "10px",
+                  }}
+                >
+                  <Link to="/Projects" style={{ textDecoration: "none" }}>
+                    <button className="button-icon">Projects</button>
+                  </Link>
+
+                  <img
+                    src={ProjectIcon}
+                    alt=""
+                    style={{ width: "45px", height: "40px", marginLeft: "8px" }}
+                  />
+                </div>
+
+                {/* Contacts */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "5px",
+                  }}
+                >
+                  <button
+                    className="button-icon"
+                    onClick={() => contactScroll()}
+                  >
+                    Contact
+                  </button>
+
+                  <img
+                    src={ContactIcon}
+                    alt=""
+                    style={{ width: "45px", height: "45px", marginLeft: "8px" }}
+                  />
+                </div>
+              </div>
+              <div style={{ marginTop: "10%" }}>
+                <div style={{ textAlign: "right" }}>
+                  <span className="hey-im">Hey I'm </span>{" "}
+                  <span className="niharika">niharika</span>
+                </div>
+                <div className="a-shy-optimistic">
+                  A shy, optimistic, and pretty girl who is so grateful to turn
+                  her passion into her career. Seeing the content expression on
+                  users' faces when they like the design gives me joy.
+                </div>
                 <img
-                  src={ContactIcon}
+                  src={Leaf}
                   alt=""
-                  style={{ width: "45px", height: "45px", marginLeft: "8px" }}
+                  className="leaf-graphic"
                 />
               </div>
-
+            </div>
+          </div>
+          {/* Second Page Scroll Education and Experience */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            }}
+          >
+            <div style={{ marginTop: "60px" }}>
+              <div
+                className="main-heading"
+                style={{ justifyContent: "center" }}
+              >
+                <div id="about-section">education </div>
+                
+              </div>
 
             </div>
+            <div>
+              <div style={{ marginTop: "80px", marginLeft: "80px" }}>
+                <h2 className="heading-bold">
+                  Master's in Interaction and <br />
+                  Experience Design
+                </h2>
+                <p className="content-paragraph">
+                  University of Limerick, Ireland
+                </p>
+              </div>
+              
+            </div>
+            <div>
+              <div style={{ marginTop: "80px", marginLeft: "80px" }}>
+                <h2 className="heading-bold">
+                  Bachelor's in Design (Product <br />
+                  Design)
+                </h2>
+                <p className="content-paragraph">
+                  Symbiosis School of Planning, Architecture and Design
+                </p>
+              </div>
+              
+            </div>
+          </div>
 
-            {/* Introduction brief */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            }}
+          >
+            <div>
+              <div
+                className="main-heading"
+                style={{ justifyContent: "center" }}
+              >
+                <div>experience</div>
+              </div>
+            </div>
+            <div>
+              <div style={{ marginTop: "6%", marginLeft: "80px" }}>
+                <h2 className="heading-bold">Product Design Intern</h2>
+                <p className="content-paragraph">
+                  Meir Living, India <br />
+                  Apr 2023- Aug 2023
+                </p>
+              </div>
+            </div>
+            <div>
+              <div style={{ marginTop: "6%", marginLeft: "80px" }}>
+                <h2 className="heading-bold">Product Design Intern</h2>
+                <p className="content-paragraph">
+                  My Home Decor, India <br />
+                  Jun 2024- Aug 2024
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            }}
+          >
+            <div style={{ marginTop: "60px" }}>
+              
+
+                <div
+                style={{
+                  marginRight: "30%",
+                  textAlign: "center",
+                  
+                }}
+              >
+                <p className="numbering" style={{ marginBottom: "0px" }}>
+                  1
+                </p>
+                <p className="content-paragraph">
+                  3D Modelling <br />
+                  Rhinoceros 3D <br />
+                  Keyshot
+                </p>
+              </div>
+            </div>
+            <div>
+              
+              
+            
+              <div style={{  textAlign: "center", marginTop:"60px" }}>
+                <p className="numbering" style={{ marginBottom: "0px" }}>
+                  2
+                </p>
+                <p className="content-paragraph">
+                  UX Research <br />
+                  Conducting Interview <br />
+                  Creating Inforgraphics
+                </p>
+              </div>
+              
+            </div>
+            <div>
+              
+              
+            <div
+              className="main-heading"
+              style={{ textAlign: "center", marginTop: "40%" }}
+            >
+              top skills
+            </div>
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            }}
+          >
+            <div style={{ marginTop: "60px" }}>
+              
+
+              
+              <div style={{ marginRight:"50%", textAlign: "center" }}>
+              <p className="numbering" style={{ marginBottom: "0px" }}>
+                3
+              </p>
+              <p className="content-paragraph">
+                Branding via UI <br />
+                Apt Design Elements <br />
+                Following Brand Guidelines
+              </p>
+            </div>
+            </div>
+            <div>
+              
+              
+            <div>
+              
+              <div style={{  textAlign: "center", marginTop: "60px"}}>
+                <p className="numbering" style={{ marginBottom: "0px" }}>
+                  4
+                </p>
+                <p className="content-paragraph">
+                  Basic Knowledge of <br />
+                  Typescript <br />
+                  React
+                </p>
+              </div>
+            </div>
+            </div>
 
             <div
-              className="line"
-              style={{ position: "absolute", top: "72.5%", right: "18%" }}
-            ></div>
-
-            <div>
-              <div>
-                <span
-                  className="niharika"
-                  style={{ position: "absolute", top: "65%", left: "84%" }}
-                >
-                  niharika
-                </span>
-                <span
-                  className="hey-im"
-                  style={{ position: "absolute", top: "66%", left: "73.5%" }}
-                >
-                  Hey!! I am
-                </span>
-              </div>
-
-              <span
-                className="a-shy-optimistic"
-                style={{ position: "absolute", top: "74%", left: "68%" }}
-              >
-                A shy, optimistic, and pretty girl who is <br />
-                so grateful to turn her passion into her <br />
-                career. Seeing the content expression <br />
-                on users' faces when they like the <br />
-                design gives me joy.
-              </span>
+              className="main-heading"
+              style={{ textAlign: "center", marginTop: "40%", opacity: "0%" }}
+            >
+              top skills
             </div>
+            
+          </div>
 
-            <img
-              
-              src={Leaf}
-              alt=""
+          {/* Third Page Gallery */}
+
+          <div>
+            <div
               style={{
-                position: "absolute",
-                top: "93%",
-                right: "4%",
-                width: "340px",
-                height: "auto",
-                opacity: "30%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: "50px",
+                gap: "10px",
               }}
-              
-            />
+            >
+              <img
+                src={Flower}
+                alt="Flower"
+                className="flower-rotate-clockwise"
+                style={{
+                  width: "60px",
+                  height: "auto",
+                  opacity: "20%",
+                }}
+              />
+              <h1 className="main-heading" style={{}} id="gallery-section">
+                gallery
+              </h1>
+              <img
+                src={Flower}
+                alt="Flower"
+                className="flower-rotate-counterclockwise"
+                style={{
+                  width: "60px",
+                  height: "auto",
+                  opacity: "20%",
+                }}
+              />
+            </div>
+            <div
+              className="grid-container"
+              style={{
+                marginTop: "3%",
+
+                paddingRight: "60px",
+                paddingLeft: "60px",
+              }}
+            >
+              <div style={{ background: "white", borderRadius: "25px" }}>
+                <div>
+                  <Link to="/FourthPage">
+                    <img
+                      src={Picture1}
+                      alt=""
+                      style={{
+                        width: "70%",
+                        transition: "filter 0.3s ease",
+                        marginLeft: "15%",
+                      }}
+                      onMouseEnter={(e) =>
+                        ((e.target as HTMLImageElement).style.filter =
+                          "brightness(0.8)")
+                      } // Darken image on hover
+                      onMouseLeave={(e) =>
+                        ((e.target as HTMLImageElement).style.filter =
+                          "brightness(1)")
+                      } // Reset to normal on hover leave
+                    />
+                  </Link>
+                </div>
+                <div
+                  className="heading-bold"
+                  style={{
+                    textAlign: "center",
+                    marginTop: "-8%",
+                    marginBottom: "10%",
+                  }}
+                >
+                  Corporate Headshot
+                </div>
+              </div>
+              <div style={{ background: "white", borderRadius: "25px" }}>
+                <div>
+                  <Link to="/FifthPage">
+                    <img
+                      src={Picture2}
+                      alt=""
+                      style={{
+                        width: "70%",
+                        transition: "filter 0.3s ease",
+                        marginLeft: "15%",
+                      }}
+                      onMouseEnter={(e) =>
+                        ((e.target as HTMLImageElement).style.filter =
+                          "brightness(0.8)")
+                      } // Darken image on hover
+                      onMouseLeave={(e) =>
+                        ((e.target as HTMLImageElement).style.filter =
+                          "brightness(1)")
+                      } // Reset to normal on hover leave
+                    />
+                  </Link>
+                </div>
+                <div
+                  className="heading-bold"
+                  style={{
+                    textAlign: "center",
+                    marginTop: "-8%",
+                    marginBottom: "10%",
+                  }}
+                >
+                  Aesthetic Shot
+                </div>
+              </div>
+              <div style={{ background: "white", borderRadius: "25px" }}>
+                <div>
+                  <Link to="/SixthPage">
+                    <img
+                      src={Picture3}
+                      alt=""
+                      style={{
+                        width: "70%",
+                        transition: "filter 0.3s ease",
+                        marginLeft: "15%",
+                      }}
+                      onMouseEnter={(e) =>
+                        ((e.target as HTMLImageElement).style.filter =
+                          "brightness(0.8)")
+                      } // Darken image on hover
+                      onMouseLeave={(e) =>
+                        ((e.target as HTMLImageElement).style.filter =
+                          "brightness(1)")
+                      } // Reset to normal on hover leave
+                    />
+                  </Link>
+                </div>
+                <div
+                  className="heading-bold"
+                  style={{
+                    textAlign: "center",
+                    marginTop: "-8%",
+                    marginBottom: "10%",
+                  }}
+                >
+                  Picture which Defines Me
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Second Page Scroll Education and Experience */}
-
-      <div style={{ height: "20%", display: "flex" }}>
-        {/* Education section */}
-        <span className="education" id="about-section">education</span>
-
-        <div className="heading-bold">
-          <span style={{ position: "absolute", left: "38%", top: "105%" }}>
-            Master's in Interaction and
-            <br /> Experience Design
-          </span>
-          <span style={{ position: "absolute", left: "68%", top: "105%" }}>
-            Bachelor's in Design (Product <br /> Design)
-          </span>
-        </div>
-
-        <div className="content-paragraph">
-          <span style={{ position: "absolute", left: "38%", top: "114%" }}>
-            University of Limerick, Ireland
-          </span>
-          <span style={{ position: "absolute", left: "68%", top: "114%" }}>
-            Symbiosis School of Planning, <br /> Architecture and Design
-          </span>
-        </div>
-      </div>
-
-      {/* Experience Section  */}
-      <div style={{ display: "flex", width: "33%" }}>
-        <span className="experience">experience</span>
-
-        <div className="heading-bold">
-          <span style={{ position: "absolute", left: "38%", top: "125%" }}>
-            Product Design Intern
-          </span>
-          <span style={{ position: "absolute", left: "68%", top: "125%" }}>
-            Product Design Intern
-          </span>
-        </div>
-
-        <div className="content-paragraph">
-          <span style={{ position: "absolute", left: "38%", top: "130%" }}>
-            Meir Living, India
-            <br />
-            Apr 2023- Aug 2023
-          </span>
-          <span style={{ position: "absolute", left: "68%", top: "130%" }}>
-            My Home Decor, India
-            <br />
-            Jun 2024- Aug 2024
-          </span>
-        </div>
-      </div>
-
-      {/* Numbering of skills      */}
-      <div style={{ display: "flex" }}>
-        <div style={{ width: "60%" }}>
-          <div className="numbering">
-            <span style={{ position: "absolute", left: "13%", top: "140%" }}>
-              1
-            </span>
-            <span style={{ position: "absolute", left: "43%", top: "140%" }}>
-              2
-            </span>
-            <span style={{ position: "absolute", left: "13%", top: "168%" }}>
-              3
-            </span>
-            <span style={{ position: "absolute", left: "43%", top: "168%" }}>
-              4
-            </span>
-
-            {/* Skills */}
-          </div>
-          <div className="content-paragraph">
-            <span
-              style={{
-                position: "absolute",
-                left: "10%",
-                top: "157%",
-                textAlign: "center",
-              }}
-            >
-              3D Modelling <br />
-              Rhinoceros 3D <br />
-              Keyshot
-            </span>
-
-            <span
-              style={{
-                position: "absolute",
-                left: "38%",
-                top: "157%",
-                textAlign: "center",
-              }}
-            >
-              UX Research <br />
-              Conducting Interview <br />
-              Creating Inforgraphics
-            </span>
-
-            <span
-              style={{
-                position: "absolute",
-                left: "7%",
-                top: "184%",
-                textAlign: "center",
-              }}
-            >
-              Branding via UI <br />
-              Apt Design Elements <br />
-              Following Brand Guidelines
-            </span>
-
-            <span
-              style={{
-                position: "absolute",
-                left: "39%",
-                top: "184%",
-                textAlign: "center",
-              }}
-            >
-              Basic Knowledge of <br />
-              Typescript <br />
-              React
-            </span>
-          </div>
-        </div>
-
-        <div className="main-heading">
-          <span style={{ position: "absolute", right: "14%", top: "160%" }}>
-            top skills
-          </span>
-        </div>
-      </div>
-
-      {/* Third Page Gallery */}
-
-      <div className="main-heading">
-        <span
-          style={{ position: "absolute", left: "44%", top: "210%" }}
-          id="gallery-section"
-        >
-          gallery
-        </span>
-      </div>
-
-      {/* Polaroid background */}
-      <div>
-        <div
-          style={{
-            height: "550px",
-            width: "380px",
-            background: "white",
-            position: "absolute",
-            top: "226%",
-            left: "7.5%",
-            borderRadius: "30px",
-          }}
-        ></div>
-        <div
-          style={{
-            height: "550px",
-            width: "380px",
-            background: "white",
-            position: "absolute",
-            top: "226%",
-            left: "37.5%",
-            borderRadius: "30px",
-          }}
-        ></div>
-        <div
-          style={{
-            height: "550px",
-            width: "380px",
-            background: "white",
-            position: "absolute",
-            top: "226%",
-            right: "7.5%",
-            borderRadius: "30px",
-          }}
-        ></div>
-      </div>
-
-      {/* Pictures Gallery      */}
-      <div style={{ display: "flex" }}>
-      <Link to="/FourthPage">
-        <img
-          src={Picture1}
-          alt="Picture1"
-          style={{
-            position: "absolute",
-            left: "10%",
-            top: "223%",
-            width: "20%",
-            height: "auto",
-            transition: "filter 0.3s ease", // Smooth transition for color change
-          }}
-          onMouseEnter={(e) => e.target.style.filter = "brightness(0.8)"} // Darken image on hover
-          onMouseLeave={(e) => e.target.style.filter = "brightness(1)"} // Reset to normal on hover leave
-        />
-      </Link>
-
-      <Link to="/FifthPage">
-        <img
-          src={Picture2}
-          alt="Picture2"
-          style={{
-            position: "absolute",
-            left: "40%",
-            top: "223%",
-            width: "20%",
-            height: "auto",
-            transition: "filter 0.3s ease", // Smooth transition for color change
-          }}
-          onMouseEnter={(e) => e.target.style.filter = "brightness(0.8)"} // Darken image on hover
-          onMouseLeave={(e) => e.target.style.filter = "brightness(1)"} // Reset to normal on hover leave
-        />
-      </Link>
-
-      <Link to="/SixthPage">
-        <img
-          src={Picture3}
-          alt="Picture3"
-          style={{
-            position: "absolute",
-            right: "10%",
-            top: "223%",
-            width: "20%",
-            height: "auto",
-            transition: "filter 0.3s ease", // Smooth transition for color change
-          }}
-          onMouseEnter={(e) => e.target.style.filter = "brightness(0.8)"} // Darken image on hover
-          onMouseLeave={(e) => e.target.style.filter = "brightness(1)"} // Reset to normal on hover leave
-        />
-      </Link>
-    </div>
-
-
-      {/* Picture Headings      */}
-      <div
-        style={{
-          display: "flex",
-          fontSize: "20px",
-          fontWeight: "600",
-          fontFamily: "Poppins",
-          color: "#314e52",
-        }}
-      >
-        <span style={{ position: "absolute", top: "292%", left: "13%" }}>
-          Corporate Headshot
-        </span>
-        <span style={{ position: "absolute", top: "292%", left: "44.5%" }}>
-          Aesthetic Picture
-        </span>
-        <span style={{ position: "absolute", top: "292%", right: "12%" }}>
-          Picture which Defines Me
-        </span>
-
-        {/* Flower decoration        */}
-        <img
-          src={Flower}
-          alt="Flower"
-          className="flower-rotate-clockwise"
-          style={{
-            position: "absolute",
-            left: "6%",
-            top: "222%",
-            width: "60px",
-            height: "auto",
-            opacity: "20%",
-          }}
-        />
-        <img
-          src={Flower}
-          alt="Flower"
-          className="flower-rotate-counterclockwise"
-          style={{
-            position: "absolute",
-            left: "35.5%",
-            top: "270%",
-            width: "60px",
-            height: "auto",
-            opacity: "20%",
-          }}
-        />
-        <img
-          src={Flower}
-          alt="Flower"
-          className="flower-rotate-clockwise"
-          style={{
-            position: "absolute",
-            right: "6%",
-            top: "222%",
-            width: "60px",
-            height: "auto",
-            opacity: "20%",
-          }}
-        />
-      </div>
-
       {/* Contacts */}
 
       <div
         style={{
-          width: "100%",
-          height: "400px",
-          backgroundColor: "#314e52",
-          position: "absolute",
-          top: "315%",
+          background: "#314e52",
+          paddingBottom: "60px",
+          marginTop: "60px",
+          paddingLeft: "3vw",
+          paddingRight: "3vw",
         }}
-      ></div>
-
-      {/* Flower motif */}
-      <div style={{ display: "flex", margin: "3px" }}>
-        <img
-          src={Flowerwhite}
-          alt="Flower"
-          className="flower-rotate-counterclockwise"
-          style={{
-            position: "absolute",
-            left: "48.35%",
-            top: "322%",
-            width: "50px",
-            height: "auto",
-          }}
-        />
-
-        <img
-          src={Flowerwhite}
-          alt="Flower"
-          className="flower-rotate-counterslow"
-          style={{
-            position: "absolute",
-            left: "44%",
-            top: "322%",
-            width: "50px",
-            height: "auto",
-          }}
-        />
-
-        <img
-          src={Flowerwhite}
-          alt="Flower"
-          className="flower-rotate-slow"
-          style={{
-            position: "absolute",
-            right: "44%",
-            top: "322%",
-            width: "50px",
-            height: "auto",
-          }}
-        />
-      </div>
-
-      {/* Heading Contacts */}
-      <span
-        style={{
-          position: "absolute",
-          left: "43.5%",
-          top: "330%",
-          fontFamily: "bestigia",
-          fontSize: "70px",
-          color: "#F7F6E7",
-        }}
-        id="contact-section"
       >
-        contact
-      </span>
-
-      {/* Phone Number, i don't think needed */}
-      <div className="content-paragraph-reverse">
-        {/* <span
+        {/* Flower Images Section */}
+        <div
           style={{
-            position: "absolute",
-            top: "354%",
-            left: "45%",
-            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            gap: "20px", // Adjust gap for responsiveness
+            flexWrap: "wrap", // Wrap flowers on smaller screens
           }}
         >
-          +353 (0) 894722369
-        </span> */}
-
-        {/* Email Address */}
-        <span style={{ position: "absolute", top: "350%", left: "48.5%" }}>
-          <a
-            className="content-paragraph-reverse"
-            href="mailto:niharikasharma332244@gmail.com"
-          >
-            <img src={Email} alt="" style={{ width: "60px", height: "auto" }} />
-          </a>
-        </span>
-        <span
-          className="content-paragraph-reverse"
-          style={{
-            position: "absolute",
-            top: "358%",
-            left: "47%",
-            textAlign: "center",
-          }}
-        >
-          Get in Touch <br />
-          Collaborate?
-        </span>
-
-        {/* LinkedIn  */}
-        <span style={{ position: "absolute", top: "350%", left: "20%" }}>
-          <a
-            className="content-paragraph-reverse"
-            href="https://www.linkedin.com/in/niharika-sharma09/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <div style={{ marginTop: "3%", display: "flex", gap: "20px" }}>
             <img
-              src={Linkedin}
-              alt=""
-              style={{ width: "50px", height: "auto" }}
+              src={Flowerwhite}
+              alt="Flower"
+              className="flower-rotate-counterclockwise"
+              style={{
+                width: "50px",
+                height: "auto",
+              }}
             />
-          </a>
-        </span>
-        <span
-          className="content-paragraph-reverse"
-          style={{
-            position: "absolute",
-            top: "358%",
-            left: "18%",
-            textAlign: "center",
-          }}
-        >
-          Follow me on <br />
-          LinkedIn
-        </span>
 
-        {/* Behance         */}
-        <span style={{ position: "absolute", top: "350%", right: "20%" }}>
-          <a
-            className="content-paragraph-reverse"
-            href="https://www.behance.net/niharikasharma17"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
             <img
-              src={Behance}
-              alt=""
-              style={{ width: "50px", height: "auto" }}
+              src={Flowerwhite}
+              alt="Flower"
+              className="flower-rotate-counterslow"
+              style={{
+                width: "50px",
+                height: "auto",
+                marginLeft: "20px",
+                marginRight: "20px",
+              }}
             />
-          </a>
-        </span>
-        <span
-          className="content-paragraph-reverse"
+
+            <img
+              src={Flowerwhite}
+              alt="Flower"
+              className="flower-rotate-slow"
+              style={{
+                width: "50px",
+                height: "auto",
+              }}
+            />
+          </div>
+        </div>
+
+        {/* Contact Heading */}
+        <div>
+          <h1
+            className="main-heading-reverse"
+            id="contact-section"
+            style={{
+              fontSize: "3rem", // Adjust font size for responsiveness
+              textAlign: "center",
+            }}
+          >
+            contact
+          </h1>
+        </div>
+
+        {/* Contact Links Section */}
+        <div
           style={{
-            position: "absolute",
-            top: "358%",
-            right: "16%",
-            textAlign: "center",
+            display: "flex",
+            flexWrap: "wrap", // Allow wrapping for smaller screens
+            gap: "30px",
+            justifyContent: "center",
+            marginTop: "3%",
           }}
         >
-          Check Out my Work on
-          <br />
-          Behance
-        </span>
+          {/* LinkedIn Section */}
+          <div style={{ justifyItems: "center", textAlign: "center" }}>
+            <a href="https://www.linkedin.com/in/niharika-sharma09/">
+              <img
+                src={Linkedin}
+                alt="LinkedIn"
+                style={{ width: "50px", height: "auto" }}
+              />
+            </a>
+            <div
+              className="content-paragraph-reverse"
+              style={{ marginTop: "6%" }}
+            >
+              Follow me on <br />
+              LinkedIn
+            </div>
+            <div
+              className="content-paragraph-reverse"
+              style={{ marginTop: "0%", opacity: "0%" }}
+            >
+              Check Out my Work on <br />
+              Behance
+            </div>
+          </div>
+
+          {/* Email Section */}
+          <div style={{ justifyItems: "center", textAlign: "center" }}>
+            <a href="mailto:niharikasharma332244@gmail.com">
+              <img
+                src={Email}
+                alt="Email"
+                style={{ width: "70px", height: "auto" }}
+              />
+            </a>
+            <div
+              className="content-paragraph-reverse"
+              style={{ marginTop: "10%" }}
+            >
+              Get in Touch <br />
+              Collaborate?
+            </div>
+          </div>
+
+          {/* Behance Section */}
+          <div style={{ justifyItems: "center", textAlign: "center" }}>
+            <a href="https://www.behance.net/niharikasharma17">
+              <img
+                src={Behance}
+                alt="Behance"
+                style={{ width: "50px", height: "auto" }}
+              />
+            </a>
+            <div
+              className="content-paragraph-reverse"
+              style={{ marginTop: "6%" }}
+            >
+              Check Out my Work on <br />
+              Behance
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

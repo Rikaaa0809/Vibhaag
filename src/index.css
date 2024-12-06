@@ -1,12 +1,7 @@
-.main-page {
-  height: 372vh;
-  background: #e7e6e1;
-}
 
 .navbar-main-style {
   background: #314e52;
   padding: 10px;
- 
 }
 
 .logo-style {
@@ -14,20 +9,15 @@
   height: auto;
 }
 
-.logo-div {
-  justify-content: flex-end;
-  display: flex;
+.first-division {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
-.home-div {
-  justify-content: flex-start;
-  display: flex;
-}
+
 
 .whole-thing-div {
-  width: 80%;
-  margin-left: 90px;
-  margin-top: 50px;
+  width: 100%
 }
 
 .a-shy-optimistic {
@@ -35,6 +25,9 @@
   font-size: 20px;
   font-family: Poppins;
   color: #314e52;
+  margin-top: 10px;
+  margin-left: 80px;
+  text-align: justify;
   
 }
 
@@ -42,47 +35,33 @@
   font-size: 31px;
   font-family: Poppins;
   color: #314e52;
-  position: absolute; left: 48%; top: 88%;
+  
 }
 
 .niharika {
-  position: absolute; left: 80%; top: 64%;
+  
   font-size: 38px;
   font-family: Bestigia;
   color: #314e52;
 
-  display: flex;
+  
 }
 
-.projects {
- 
 
-  font-size: 20px;
-  ;
-  font-family: Poppins;
-  color: #314e52;
- 
-}
-
-.education {
-  position: absolute; left: 5%; top: 105%;
-  font-size: 70px;
-  font-family: Bestigia;
-  color: #314e52;
-}
-
-.experience {
-  position: absolute; left: 5%; top: 123%; 
-  font-size: 70px;
-  font-family: Bestigia;
-  color: #314e52;
-}
 
 .main-heading {
   font-size: 70px;
   font-family: Bestigia;
   color: #314e52;
   }
+
+  .main-heading-reverse {
+    font-size: 70px;
+    font-family: Bestigia;
+    color: #F7F6E7;
+    text-align: center;
+    margin-top: 30px;
+    }
   
 .heading-bold {
  
@@ -91,6 +70,15 @@
   font-family: Poppins;
   color: #314e52;
 
+}
+
+.leaf-graphic {
+  position: absolute;
+  top: 113%;
+  right: 3%;
+  width: 280px;
+  height: auto;
+  opacity: 30%;
 }
 
 .content-paragraph {
@@ -117,57 +105,281 @@
   -webkit-text-stroke: 0.25px #acacac;
 }
 
-.heading-bullets {
-  font-weight: 500;
+ 
+
+.button-icon {
+  font-size: 18px;
   font-family: Poppins;
-}
-
-.rectangle-div {
-  width: 100%;
-  position: relative;
-  background-color: #d9d9d9;
-  height: 772px;
-}
-
-.photographs-projects {
-  width: 100%;
-  position: relative;
-  max-width: 100%;
-  overflow: hidden;
-  height: 508px;
-  object-fit: cover;
-}
-
-.d-flex {
-  display: flex;
-} 
-
-.icon-size {
-  width: 45px;
-  height: 45px;
+  color: #314e52;
+  cursor: pointer;
+  background-color: #F6F5F2;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  padding: 5px;
+  width: 200px;
 }
 
 .line {
   height: 0.5px;
-  width: 624px;
+  width: 580px;
   background: #314e52;
-  position: absolute; right: 17%; top: 70%;
+  position: absolute;
+  right: 16.5%;
+  top: 74.5%;
+  
 }
 
-/* Add hover effect to buttons */
-button.content-paragraph:hover {
-  background-color: #dcdcdc; /* Light gray background on hover */
-  transform: scale(1.05); /* Slightly enlarge the button */
-  transition: all 0.3s ease-in-out; /* Smooth transition */
-  color: #314e52; /* Change text color to match theme */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+@media (max-width: 1400px) {
+  .line {
+    display: none;
+  }
+
+  .leaf-graphic {
+    display: none;
+  } 
 }
 
-/* Add hover effect for buttons with icons */
-button.content-paragraph:hover + img {
-  transform: scale(1.1); /* Enlarge the icon slightly */
-  transition: all 0.3s ease-in-out;
+
+  
+
+
+@media (max-width: 1200px) {
+  .main-heading {
+    font-size: 50px;
+  }
+
+  .main-heading-reverse {
+    font-size: 50px;
+  }
+
+  .hey-im, .niharika {
+    font-size: 26px;
+  }
+
+  .leaf-graphic {
+    display: none;
+  }
+
+  .a-shy-optimistic {
+    font-size: 18px;
+    margin-left: 40px;
+    text-align: justify;
+  }
+
+  .heading-bold {
+    font-size: 18px;
+  }
+
+  .content-paragraph {
+    font-size: 16px;
+  }
+
+  .content-paragraph-reverse {
+    font-size: 14px;
+  }
+
+  .numbering {
+    font-size: 72px;
+  }
+
+  .button-icon {
+    font-size: 16px;
+    width: 180px;
+    padding: 4px;
+  }
+
+  .line {
+    display: none;
+  }
 }
+
+@media (max-width: 992px) {
+  .main-heading, .main-heading-reverse {
+    font-size: 40px;
+  }
+
+  .leaf-graphic {
+    display: none;
+  }
+
+  .hey-im, .niharika {
+    font-size: 22px;
+  }
+
+  .a-shy-optimistic {
+    font-size: 16px;
+    margin-left: 20px;
+    text-align: justify;
+  }
+
+  .heading-bold {
+    font-size: 16px;
+  }
+
+  .content-paragraph {
+    font-size: 14px;
+  }
+
+  .content-paragraph-reverse {
+    font-size: 12px;
+  }
+
+  .numbering {
+    font-size: 60px;
+  }
+
+  .button-icon {
+    font-size: 14px;
+    width: 150px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .first-division {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+ 
+}
+
+@media (max-width: 768px) {
+  .main-heading, .main-heading-reverse {
+    font-size: 30px;
+  }
+
+  .leaf-graphic {
+    display: none;
+  }
+
+  .hey-im, .niharika {
+    font-size: 20px;
+  }
+
+  .a-shy-optimistic {
+    font-size: 14px;
+    margin-left: 10px;
+   
+    text-align: justify;
+  }
+
+  .heading-bold {
+    font-size: 14px;
+  }
+
+  .content-paragraph, .content-paragraph-reverse {
+    font-size: 12px;
+  }
+
+  .numbering {
+    font-size: 48px;
+  }
+
+  .first-division {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .button-icon {
+    font-size: 12px;
+    width: 120px;
+    padding: 3px;
+  }
+
+  .icon-size {
+    width: 25px;
+    height: 25px;
+    margin-left: 8px;
+  }
+
+  .line {
+    display: none; /* Hide the line for smaller screens */
+  }
+}
+
+@media (max-width: 430px) {
+  .main-heading, .main-heading-reverse {
+    font-size: 40px;
+  }
+
+  .leaf-graphic {
+    display: none;
+  }
+
+
+
+  .icon-size {
+    width: 25px;
+    height: 25px;
+    margin-left: 8px;
+  }
+
+  .hey-im, .niharika {
+    font-size: 18px;
+    
+  }
+
+  .a-shy-optimistic {
+    font-size: 12px;
+    margin-left: 5px;
+    text-align: justify;
+  }
+
+  .heading-bold, .content-paragraph, .content-paragraph-reverse {
+    font-size: 8px;
+  }
+
+  .numbering {
+    font-size: 36px;
+  }
+
+  .button-icon {
+    font-size: 10px;
+    width: 100px;
+    padding: 2px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .first-division {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+
+
+/* Default: 3 Columns for Large Screens */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 90px; /* Adjust spacing between items */
+}
+
+/* Medium Screens: 2 Columns */
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px
+  }
+}
+
+/* Small Screens: 1 Column */
+@media (max-width: 576px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+
+}
+
+
+
 
 
 @keyframes rotateClockwise {
@@ -223,13 +435,7 @@ button.content-paragraph:hover + img {
   animation: rotateSlowClockwise 10s linear infinite;
 }
 
-/* .rectangle {
-  height: 550px;
-  width: 380px;
-  background: #d9d9d9;
-  position: absolute; top: 226%; left: '30%';
-  
-} */
+
 
 /* Font Files */
 

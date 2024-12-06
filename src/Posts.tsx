@@ -1,5 +1,5 @@
 import { useState } from "react";
-import HomeIcon from "./assets/Resources/home.png"
+import HomeIcon from "./assets/Resources/home.png";
 import { Link } from "react-router-dom";
 import BellPeppers from "./assets/Resources/Bell Peppers.png";
 import Buratta from "./assets/Resources/Burratta.png";
@@ -9,18 +9,31 @@ import Desserts from "./assets/Resources/Desserts.png";
 import Paneer from "./assets/Resources/Paneer.png";
 import Flower from "./assets/Resources/flower.png";
 
-const Post = ({ post }) => {
-  const [reactions, setReactions] = useState({
+type PostType = {
+  id: number;
+  title: string;
+  image: string;
+};
+
+type ReactionKeys = "love" | "pizza" | "coffee" | "ice" | "chilli";
+
+type PostProps = {
+  post: PostType;
+};
+
+const Post = ({ post }: PostProps) => {
+  const [reactions, setReactions] = useState<Record<ReactionKeys, number>>({
     love: 289,
     pizza: 54,
     coffee: 5,
     ice: 124,
     chilli: 4,
   });
-  const [commentContent, setCommentContent] = useState("");
+
+  const [commentContent, setCommentContent] = useState<string>("");
   const [comments, setComments] = useState<string[]>([]);
 
-  const handleReaction = (type) => {
+  const handleReaction = (type: ReactionKeys) => {
     setReactions((prev) => ({ ...prev, [type]: prev[type] + 1 }));
   };
 
@@ -70,7 +83,13 @@ const Post = ({ post }) => {
       </div>
 
       {/* Reaction Buttons Section */}
-      <div style={{ display: "flex", justifyContent: "space-around", margin: "15px 0" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          margin: "15px 0",
+        }}
+      >
         {[
           { type: "love", color: "#FF3B30", label: "❤" },
           { type: "pizza", color: "#007bff", label: "🍕" },
@@ -80,7 +99,7 @@ const Post = ({ post }) => {
         ].map(({ type, color, label }) => (
           <button
             key={type}
-            onClick={() => handleReaction(type)}
+            onClick={() => handleReaction(type as ReactionKeys)}
             style={{
               background: "none",
               border: "none",
@@ -97,16 +116,16 @@ const Post = ({ post }) => {
                 transition: "transform 0.2s ease-in-out",
               }}
               onMouseOver={(e) => {
-                (e.target as HTMLSpanElement).style.transform = "scale(1.2)";
+                (e.target as HTMLElement).style.transform = "scale(1.2)";
               }}
               onMouseOut={(e) => {
-                (e.target as HTMLSpanElement).style.transform = "scale(1)";
+                (e.target as HTMLElement).style.transform = "scale(1)";
               }}
             >
               {label}
             </span>
             <span style={{ fontSize: "12px", marginTop: "1px", color: "#fff" }}>
-              {reactions[type]}
+              {reactions[type as ReactionKeys]}
             </span>
           </button>
         ))}
@@ -138,7 +157,7 @@ const Post = ({ post }) => {
           borderRadius: "17px",
           cursor: "pointer",
           marginBottom: "5px",
-          height: '35px'
+          height: "35px",
         }}
       >
         Comment
@@ -165,7 +184,7 @@ const Post = ({ post }) => {
 };
 
 const Posts = () => {
-  const posts = [
+  const posts: PostType[] = [
     { id: 1, title: "Veggie Bliss", image: BellPeppers },
     { id: 2, title: "Sweet Tooth Heaven", image: Desserts },
     { id: 3, title: "Creamy Cottage Indulgence", image: Paneer },
@@ -178,15 +197,15 @@ const Posts = () => {
     <div
       style={{
         display: "flex",
-        flexWrap: "wrap", 
-        justifyContent: "center", 
-        alignItems: "center", 
-        gap: "10px",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "20px",
         backgroundColor: "#E7E6E1",
         padding: "20px",
-        width: "100%", 
-        minHeight: "100vh", 
-        overflow: "hidden", 
+        width: "100%",
+        minHeight: "100vh",
+        overflow: "hidden",
         boxSizing: "border-box",
       }}
     >
@@ -194,8 +213,9 @@ const Posts = () => {
         <div
           key={post.id}
           style={{
-            flex: "0 0 auto",
-            width: "400px", // Fixed width for each post
+            flex: "1 1 calc(100% - 40px)", // Default for smaller screens
+            maxWidth: "400px", // Limits the width on larger screens
+            margin: "10px",
           }}
         >
           <Post post={post} />
@@ -203,71 +223,107 @@ const Posts = () => {
       ))}
 
       {/* Top Icon Section */}
-      <div style={{position: "absolute", left: "4%", top: '0%'}}>
-          <Link to="/FirstPage">
-            <div style={{width: '60px', height: '100px', borderBottomRightRadius: '30px',borderBottomLeftRadius: '30px', backgroundColor: '#F6F5F2'}}>
-            <img
-            src={HomeIcon}
-            alt=""
+      <div
+        style={{
+          position: "absolute",
+          left: "4%",
+          top: "0%",
+          zIndex: 10,
+        }}
+      >
+        <Link to="/FirstPage">
+          <div
             style={{
-              marginLeft: '15px',
-              marginTop: '50px',
-              width: "30px",
-              height: "auto",
-              opacity: "40%",
+              width: "60px",
+              height: "100px",
+              borderBottomRightRadius: "30px",
+              borderBottomLeftRadius: "30px",
+              backgroundColor: "#F6F5F2",
             }}
-            /></div>
-          </Link>
-        </div>
-
-{/* Flower Decoration */}
-
-        <div>
+          >
             <img
-                src={Flower}
-                alt="Flower"
-                className="flower-rotate-clockwise"
-                style={{
-                    position: "absolute",
-                    left: "8%",
-                    top: "80%",
-                    width: "60px",
-                    height: "auto",
-                    opacity: "30%",
-                }}
+              src={HomeIcon}
+              alt=""
+              style={{
+                marginLeft: "15px",
+                marginTop: "50px",
+                width: "30px",
+                height: "auto",
+                opacity: "40%",
+              }}
             />
+          </div>
+        </Link>
+      </div>
 
-            <img
-                src={Flower}
-                alt="Flower"
-                className="flower-rotate-clockwise"
-                style={{
-                    position: "absolute",
-                    right: "8%",
-                    top: "30%",
-                    width: "60px",
-                    height: "auto",
-                    opacity: "30%",
-                }}
-            />
+      {/* Flower Decoration */}
+      <div>
+        <img
+          src={Flower}
+          alt="Flower"
+          className="flower-rotate-clockwise"
+          style={{
+            position: "absolute",
+            left: "8%",
+            top: "80%",
+            width: "50px",
+            height: "auto",
+            opacity: "30%",
+          }}
+        />
 
-            <img
-                src={Flower}
-                alt="Flower"
-                className="flower-rotate-clockwise"
-                style={{
-                    position: "absolute",
-                    right: "8%",
-                    top: "130%",
-                    width: "60px",
-                    height: "auto",
-                    opacity: "30%",
-                }}
-            />
+        <img
+          src={Flower}
+          alt="Flower"
+          className="flower-rotate-clockwise"
+          style={{
+            position: "absolute",
+            right: "8%",
+            top: "30%",
+            width: "50px",
+            height: "auto",
+            opacity: "30%",
+          }}
+        />
 
-        </div>
+        <img
+          src={Flower}
+          alt="Flower"
+          className="flower-rotate-clockwise"
+          style={{
+            position: "absolute",
+            right: "8%",
+            top: "130%",
+            width: "50px",
+            height: "auto",
+            opacity: "30%",
+          }}
+        />
+      </div>
+
+      {/* Responsive Styles */}
+      <style>
+        {`
+        @media (max-width: 768px) {
+          div[style*="Post"] {
+            flex: 1 1 90%; /* Full-width posts */
+            max-width: 100%;
+          }
+
+          div[style*="flower-rotate-clockwise"] {
+            display: none; /* Hide decorative elements on small screens */
+          }
+        }
+
+        @media (max-width: 480px) {
+          div[style*="Top Icon Section"] {
+            display: none; /* Hide Home icon on very small screens */
+          }
+        }
+        `}
+      </style>
     </div>
   );
 };
 
-export default Posts;
+export default Posts;

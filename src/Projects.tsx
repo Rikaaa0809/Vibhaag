@@ -1,6 +1,5 @@
 
 import HomeIcon from "./assets/Resources/home.png"
-
 import { Link } from "react-router-dom";
 import Rhythm from "./assets/Resources/Rhythm.png";
 import Alpha from "./assets/Resources/Alpha.png";
@@ -10,135 +9,199 @@ import Rendering from "./assets/Resources/Rendering.png";
 import Samosa from "./assets/Resources/Samosa.png";
 import Video from "./assets/Resources/Video.png"
 import Flower from "./assets/Resources/flower.png"
+import Heading1 from "./assets/Resources/Heading 1.png"
+import Heading2 from "./assets/Resources/Heading 2.png"
+import Heading3 from "./assets/Resources/Heading 3.png"
+import Heading4 from "./assets/Resources/Heading 4.png"
+import Heading5 from "./assets/Resources/Heading 5.png"
+import Heading6 from "./assets/Resources/Heading 6.png"
+import Heading7 from "./assets/Resources/Heading 7.png"
+import Blank from "./assets/Resources/Blank.png"
+
 
 
 const Projects = () => {
  
   return (
-    <div style={{ backgroundColor: '#e7e6e1', height: '200vh' }} >
-      <span className='main-heading' style={{ position: 'absolute', left: '42.5%', top: '10%' }}>projects</span>
+    <div style={{ backgroundColor: "#e7e6e1", minHeight: "100vh", paddingLeft: "20px", paddingRight: "20px" }}>
+      {/* Main Heading */}
+      <div style={{marginLeft: "5%"}}><div style={{ background: "white",opacity: "0.4", borderBottomRightRadius: "30px", borderBottomLeftRadius: "30px", paddingRight: "11px", paddingLeft: "11px", paddingTop: "60px", width:"60px", height: "120px" }}><Link to="/FirstPage">
+        <img src={HomeIcon} alt="Home" style={{ width: "40px", opacity: "0.4" }} /></Link></div></div>
+      <div style={{ textAlign: "center" }}>
+        <div style={{display: "flex", justifyContent: "center", marginTop: "20px"}}>
+        <img src={Flower} alt="Flower" style={{ width: "70px", height: "auto", opacity: "20%", marginRight: "20px" }} />
+        <h1  style={{ fontFamily: "BESTIGIA", fontSize: "48px", color: "#314E52", marginTop: "10px" }}>
+          projects
+        </h1>
+        <img src={Flower} alt="Flower" style={{ width: "70px", height: "auto", opacity: "20%", marginLeft: "20px" }} />
+        </div>
+        <p
+          style={{
+            fontFamily: "Poppins",
+            fontSize: "16px",
+            fontWeight: "400",
+            color: "#F2A154",
+            marginTop: "30px",
+          }}
+        >
+          Each project reflects my passion for crafting intuitive, impactful user experiences that blend creativity
+          with purpose.
+        </p>
+      </div>
 
-  {/* Subheading */}
-      <p style={{fontFamily: 'Poppins', fontSize: '16px', fontWeight:'600',  color: '#F2A154', position: 'absolute', left: '28%', top: '30%', textAlign: 'center'}}>Each project reflects my passion for crafting intuitive, impactful user experiences that <br />blend creativity with purpose.</p>
-
-  {/* Project Images */}
-      <div style={{width: '1152px', height: '935px', background: 'white', position: 'absolute', top: '50%', left:'12%', opacity: '50%'}}></div>
-
-      <a
+      {/* Project Section */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+          gridAutoRows: "auto",
+          gap: "0px",
+          padding: "50px",
+          marginLeft: "12.8%",
+          marginRight: "12.8%"
+        }}
+      >
+        {/* Project 1 */}
+        <div style={{ textAlign: "center" }}>
+          <a
             href="https://www.behance.net/gallery/168408089/RHYTHM"
             target="_blank"
             rel="noopener noreferrer"
-          ><img src={Rhythm} alt="" style={{width: '300px', position: 'absolute', left: '12%', top: '50%'}}/></a>
-      <div><span style={{fontFamily: 'Poppins', fontSize: '34px', fontWeight: '600', position: 'absolute', top: '54%', left:'34%', color: '#314E52'}}>Luxury <br />Product <br />Design.</span></div>
-      
+          >
+            <img src={Rhythm} alt="Rhythm" style={{height: "250px", width: "250px"}} />
+          </a>
+        </div>
 
-      <a
+        {/* Project 1 Heading */}
+
+        <div style={{ textAlign: "center" }}>
+            <img src={Heading1} alt="Rhythm" style={{height: "250px", width: "250px"}} />         
+        </div>
+
+        {/* Project 2 */}
+        <div style={{ textAlign: "center" }}>
+          <a
             href="https://www.behance.net/gallery/166823133/Furniture-Design"
             target="_blank"
             rel="noopener noreferrer"
-          ><img src={Alpha} alt="" style={{width: '299px', position: 'absolute', left: '49%', top: '50%'}}/></a>
-      <div><span style={{fontFamily: 'Poppins', fontSize: '34px', fontWeight: '600', position: 'absolute', top: '64%', right:'14%', textAlign: 'right', color: '#314E52'}}>Furniture <br />Design.</span></div>
-      
+          >
+            <img src={Alpha} alt="Furniture Design" style={{height: "250px", width: "250px"}} />
+          </a>
+        </div>
 
-      <a
+        {/* Project 2 Heading */}
+
+        <div style={{ textAlign: "center" }}>
+            <img src={Heading2} alt="Furniture Design" style={{ height: "250px", width: "250px" }} />         
+        </div>
+
+        {/* Project 3 */}
+        <div style={{ textAlign: "center" }}>
+          <a
             href="https://www.behance.net/gallery/168101295/Redefining-Netflix-UIUX-and-Product"
             target="_blank"
             rel="noopener noreferrer"
-          ><img src={Netflix} alt="" style={{width: '300px', position: 'absolute', left: '12%', top: '81.5%'}}/></a>
-      <div><span style={{fontFamily: 'Poppins', fontSize: '34px', fontWeight: '600', position: 'absolute', top: '96%', left:'34%', textAlign: 'right', color: '#314E52'}}>Reimagining <br />Netflix.</span></div>
-      
+          >
+            <img src={Netflix} alt="Netflix" style={{height: "250px", width: "250px"}} />
+          </a>
+        </div>
 
-      <a
+        {/* Project 3 Heading */}
+
+        <div style={{ textAlign: "center" }}>
+            <img src={Heading3} alt="Reimagining Netflix" style={{height: "250px", width: "250px" }} />         
+        </div>
+
+        {/* Project 4 */}
+        <div style={{ textAlign: "center" }}>
+          <a
             href="https://www.behance.net/gallery/144745881/PRODUCT-RENDERING"
             target="_blank"
             rel="noopener noreferrer"
-          ><img src={Rendering} alt="" style={{width: '299px', position: 'absolute', left: '49%', top: '81.5%'}}/></a>
-      <div><span style={{fontFamily: 'Poppins', fontSize: '34px', fontWeight: '600', position: 'absolute', top: '96%', right:'18%', color: '#314E52'}}>Product <br />Rendering.</span></div>
-      
+          >
+            <img src={Rendering} alt="Product Rendering" style={{height: "250px", width: "250px"}} />
+          </a>
+        </div>
 
-      <a
-            href="https://www.behance.net/gallery/166818973/Packaging-Design"
-            target="_blank"
-            rel="noopener noreferrer"
-          ><img src={Samosa} alt="" style={{width: '290px', position: 'absolute', right: '12.1%', top: '113%'}}/></a>
-      <div><span style={{fontFamily: 'Poppins', fontSize: '34px', fontWeight: '600', position: 'absolute', top: '122%', right:'34%', textAlign: 'right', color: '#314E52'}}>Samosa <br /> Packaging <br />Design.</span></div>
-      
+        {/* Project 4 Heading */}
 
-      <a
+        <div style={{ textAlign: "center" }}>
+            <img src={Heading4} alt="Product Rendering" style={{ height: "250px", width: "250px"}} />         
+        </div>
+
+        {/* Project 5 */}
+        <div style={{ textAlign: "center" }}>
+          <a
             href="https://behance.net/gallery/166819845/Form-Studies"
             target="_blank"
             rel="noopener noreferrer"
-          ><img src={Form} alt="" style={{width: '300px', position: 'absolute', left: '12%', top: '113%'}}/></a>
-      <div><span style={{fontFamily: 'Poppins', fontSize: '34px', fontWeight: '600', position: 'absolute', top: '115%', left:'34%', color: '#314E52'}}>Form <br />Studies.</span></div>
-      
+          >
+            <img src={Form} alt="Form Studies" style={{height: "250px", width: "250px" }} />
+          </a>
+        </div>
 
-      <a
+        {/* Project 5 Heading */}
+
+        <div style={{ textAlign: "center" }}>
+            <img src={Heading5} alt="Form Studies" style={{height: "250px", width: "250px" }} />         
+        </div>
+        
+
+        {/* Project 6 Heading */}
+
+        <div style={{ textAlign: "center" }}>
+            <img src={Heading6} alt="Samosa" style={{height: "250px", width: "250px"}} />         
+        </div>
+
+        {/* Project 6 */}
+
+        <div style={{ textAlign: "center" }}>
+          <a
+            href="https://www.behance.net/gallery/166818973/Packaging-Design"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Samosa} alt="Samosa Packaging" style={{height: "250px", width: "250px"}} />
+          </a>
+        </div>
+        
+
+        {/* Blank */}
+
+        <div style={{ textAlign: "center" }}>
+            <img src={Blank} alt="Blank" style={{ height: "250px", width: "250px"}} />         
+        </div> 
+
+        {/* Project 7 Heading*/}
+
+        <div style={{ textAlign: "center" }}>
+            <img src={Heading7} alt="Video" style={{ height: "250px", width: "250px" }} />         
+        </div>
+
+        {/* Project 7 */}
+
+        <div style={{ textAlign: "center" }}>
+          <a
             href="https://www.behance.net/gallery/144601311/SUHANA-SAFAR-AD-FILM"
             target="_blank"
             rel="noopener noreferrer"
-          ><img src={Video} alt="" style={{width: '299px', position: 'absolute', left: '49%', top: '146%'}}/></a>
-      <div><span style={{fontFamily: 'Poppins', fontSize: '34px', fontWeight: '600', position: 'absolute', top: '145%', right:'51.5%', textAlign: 'right', color: '#314E52'}}>Video <br />Concept.</span></div>
+          >
+            <img src={Video} alt="Video Concept" style={{ height: "250px", width: "250px" }} />
+          </a>
+        </div>
 
+        {/* Blank */}
+        
+        <div style={{ textAlign: "center" }}>
+            <img src={Blank} alt="Blank" style={{ height: "250px", width: "250px" }} />         
+        </div>
+      </div>
+
+      {/* Footer */}
       
-      
+    </div>
+  );
+};
 
-      
-
-          <Link to="/FirstPage">
-            <div style={{width: '60px', height: '100px', borderBottomRightRadius: '30px',borderBottomLeftRadius: '30px', position: "absolute", left:'4%', backgroundColor: '#F6F5F2'}}></div>
-            <img
-            src={HomeIcon}
-            alt=""
-            style={{
-              position: "absolute",
-              top: "7%",
-              left: "5%",
-              width: "30px",
-              height: "auto",
-              opacity: "40%",
-            }}
-            />
-          </Link>
-
-
-        <img
-          src={Flower}
-          alt="Flower"
-          style={{
-            position: "absolute",
-            left: "35%",
-            top: "10%",
-            width: "90px",
-            height: "auto",
-            opacity: "20%",
-          }}
-        />
-
-        <img
-          src={Flower}
-          alt="Flower"
-          style={{
-            position: "absolute",
-            right: "35%",
-            top: "10%",
-            width: "90px",
-            height: "auto",
-            opacity: "20%",
-          }}
-        />
-
-      
-
-
-
-
-
-
-
-
-    </div>
-
-  )
-}
 
 export default Projects
