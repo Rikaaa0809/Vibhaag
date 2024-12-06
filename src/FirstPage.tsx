@@ -248,7 +248,7 @@ const FirstPage = () => {
 
             </div>
             <div>
-              <div style={{ marginTop: "80px", marginLeft: "80px" }}>
+              <div className="education-spacing">
                 <h2 className="heading-bold">
                   Master's in Interaction and <br />
                   Experience Design
@@ -260,7 +260,7 @@ const FirstPage = () => {
               
             </div>
             <div>
-              <div style={{ marginTop: "80px", marginLeft: "80px" }}>
+              <div className="education-spacing">
                 <h2 className="heading-bold">
                   Bachelor's in Design (Product <br />
                   Design)
@@ -318,7 +318,7 @@ const FirstPage = () => {
 
                 <div
                 style={{
-                  marginRight: "30%",
+                  
                   textAlign: "center",
                   
                 }}
@@ -371,7 +371,7 @@ const FirstPage = () => {
               
 
               
-              <div style={{ marginRight:"50%", textAlign: "center" }}>
+              <div style={{  textAlign: "center" }}>
               <p className="numbering" style={{ marginBottom: "0px" }}>
                 3
               </p>
@@ -412,12 +412,12 @@ const FirstPage = () => {
           {/* Third Page Gallery */}
 
           <div>
-            <div
+            <div className="gallery-spacing"
               style={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                marginTop: "50px",
+              
                 gap: "10px",
               }}
             >
