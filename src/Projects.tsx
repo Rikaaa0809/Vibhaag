@@ -17,7 +17,10 @@ import Heading5 from "./assets/Resources/Heading 5.png"
 import Heading6 from "./assets/Resources/Heading 6.png"
 import Heading7 from "./assets/Resources/Heading 7.png"
 import Blank from "./assets/Resources/Blank.png"
-
+import IsleofTune from "./assets/Resources/IsleofTune.png"
+import Audacity from "./assets/Resources/Audacity.jpg"
+import Heading8 from "./assets/Heading8.png"
+import Game from "./assets/Resources/Game.jpg"
 
 
 const Projects = () => {
@@ -195,6 +198,44 @@ const Projects = () => {
         <div style={{ textAlign: "center" }}>
             <img src={Blank} alt="Blank" style={{ height: "250px", width: "250px" }} />         
         </div>
+
+        {/* Isle of tune */}
+        <div style={{ textAlign: "center" }}>
+          <a
+            href="https://www.behance.net/gallery/222873701/Interactive-Algorithmic-Soundscape"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={IsleofTune} alt="Interactive Algorithmic Sounscape" style={{ height: "250px", width: "250px" }} />
+          </a>
+        </div>
+
+        {/* Sound Design */}
+        <div style={{ textAlign: "center" }}>
+          <a
+            href="https://www.behance.net/gallery/222874501/Sound-Design-Using-Audacity"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Audacity} alt="Video Concept" style={{ height: "250px", width: "250px" }} />
+          </a>
+        </div>
+
+        {/* Game Design */}
+        <div style={{ textAlign: "center" }}>
+          <a
+            href="https://www.behance.net/gallery/224355911/Game-Design"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Game} alt="Video Concept" style={{ height: "250px", width: "250px" }} />
+          </a>
+        </div>
+
+        <div style={{ textAlign: "center" }}>
+            <img src={Heading8} alt="Video" style={{ height: "250px", width: "250px" }} />         
+        </div>
+
       </div>
 
       {/* Footer */}

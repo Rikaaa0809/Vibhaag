@@ -35,17 +35,18 @@ return (
     <main
       style={{
         display: "grid",
-        gridTemplateColumns: "1fr 2fr",
+        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
         gap: "80px",
         alignItems: "start",
       }}
     >
       {/* Left Section - Image */}
-      <div style={{ background: "white", borderRadius: "30px", padding: "20px", width:"400px", height: "600px", marginLeft: '20%' }}>
+      <div className="image-blog-image">
         <img
           src={Picture2}
           alt="Headshot"
-          style={{ width: "350px", height: "auto", borderRadius: "20px", marginTop: "-15%"  }}
+          className="image-blog-image-width"
+          style={{ borderRadius: "20px", marginTop: "-15%"  }}
         />
         <p
           style={{
